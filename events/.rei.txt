@@ -1,0 +1,61 @@
+const { Events } = require('discord.js');
+
+module.exports = {
+	name: Events.MessageCreate,
+	async execute(message) {
+        if (message.author.bot) return;
+        
+        if (message.content == '') { //反応するメッセージ(完全一致)     
+
+            await message.channel.send('');//送信するメッセージ
+            
+         }
+	},
+};
+
+// 補足
+// message.content == '' を
+// message.content.incldes('')にすると部分一致になる
+
+
+
+//例　message.content == '';
+
+const { Events } = require('discord.js');
+
+module.exports = {
+	name: Events.MessageCreate,
+	async execute(message) {
+        if (message.author.bot) return;
+        
+        if (message.content == 'Help') { //反応するメッセージ(完全一致)     
+
+            await message.channel.send('HELP！！');//送信するメッセージ
+            
+         }
+	},
+};
+
+// 〇 Help
+// ✕ Help～
+
+
+//例 message.content.includes('')
+
+const { Events } = require('discord.js');
+
+module.exports = {
+	name: Events.MessageCreate,
+	async execute(message) {
+        if (message.author.bot) return;
+        
+        if (message.content.includes('Help')) { //反応するメッセージ(完全一致)     
+
+            await message.channel.send('HELP！！');//送信するメッセージ
+            
+         }
+	},
+};
+
+// 〇 Help
+// 〇 Help～
