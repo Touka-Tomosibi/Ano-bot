@@ -37,7 +37,8 @@ module.exports = {
 
         var url2 = interaction.options.getString('url');
 
-        if (!url2.startsWith('https://youtu.be' || 'https://www.youtube' || 'https://m.youtube.com' || 'https://music.youtube'))  { 
+        // || url2.startsWith('https://www.youtube') || url2.startsWith('https://m.youtube.com') || url2.startsWith('https://music.youtube')
+        if (!url2.startsWith('https://youtu.be'))  { 
             await interaction.reply('YouTubeのURLを送信してください');
             return
         }
@@ -67,6 +68,8 @@ module.exports = {
                     inlineVolume: true,
                 });
                 resource.volume.setVolume(0.06);
+              
+                //console.log(url, stream, resource)
 
        
                 player = createAudioPlayer();
@@ -88,6 +91,7 @@ module.exports = {
         connection.destroy();
 	} else {
         await interaction.reply(`Added\n${url2}`);
+        //console.log(url, stream, resource)
         console.log(url);
     }
 }

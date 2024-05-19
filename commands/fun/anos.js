@@ -10,14 +10,14 @@ module.exports = {
 		.setDescription('あの詩集'),
 	async execute(interaction) {
         const random = Math.floor(Math.random() * ano.length);
-
+        const user = await interaction.client.users.fetch('1107584262288441364');
+    
         const anosi = new EmbedBuilder()
-	.setColor([255,255,0])
-	.setTitle('あの詩集')
-	.addFields(
-		{name: ano[random], value: '\u200B'},
-    )
-	.setTimestamp();
+	        .setColor([255,255,0])
+	        .setTitle('あの詩集')
+          .setDescription(ano[random])  
+          .setThumbnail(user.displayAvatarURL({size: 1024}))
+	        .setTimestamp()
 
 		await interaction.reply({embeds : [anosi]});
 		//

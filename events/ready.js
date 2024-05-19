@@ -5,5 +5,6 @@ module.exports = {
 	once: true,
 	execute(client) {
 		console.log(`${client.user.tag}でログイン！`);
+    client.channels.cache.get('1226560608384843967').send('ログイン！');
 	},
 };
