@@ -299,7 +299,6 @@ cron.schedule('0 0 * * 6', () => {
      console.log('土曜日')
      client.channels.cache.get('1226202848560418938').send('土曜日の天賦素材です！');
      client.channels.cache.get('1226202848560418938').send({ embeds: [doy] });
-     client.channels.cache.get('1163506095457837116').send({ files: ['https://cdn.glitch.global/48843fc3-027d-4570-9574-4473c7c04623/IMG_2276.jpg?v=1716141921458'] })
  }, {
    scheduled: true,
    timezone: "Asia/Tokyo"
