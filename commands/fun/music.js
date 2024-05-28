@@ -36,12 +36,6 @@ module.exports = {
         }
 
         var url2 = interaction.options.getString('url');
-
-        // || url2.startsWith('https://www.youtube') || url2.startsWith('https://m.youtube.com') || url2.startsWith('https://music.youtube')
-        if (!url2.startsWith('https://youtu.be'))  { 
-            await interaction.reply('YouTubeのURLを送信してください');
-            return
-        }
        
         url.push(`${interaction.options.getString('url')}`)
 
@@ -58,7 +52,7 @@ module.exports = {
             if (url.length != 0) {
 
                 stream = ytdl(ytdl.getURLVideoID(url[0]), {
-                    filter: format => format.audioCodec === 'opus' && format.container === 'webm',
+                    //filter: format => format.audioCodec === 'opus' && format.container === 'webm',
                     quality: 'highest',
                     highWaterMark: 32 * 1024 * 1024,
                 });
