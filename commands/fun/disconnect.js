@@ -20,3 +20,4 @@ module.exports = {
         await interaction.reply('切断しました')
 	},
 };
+

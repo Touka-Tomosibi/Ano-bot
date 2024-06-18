@@ -52,8 +52,8 @@ module.exports = {
             if (url.length != 0) {
 
                 stream = ytdl(ytdl.getURLVideoID(url[0]), {
-                    //filter: format => format.audioCodec === 'opus' && format.container === 'webm',
-                    quality: 'highest',
+                    filter: format => format.audioCodec === 'opus' && format.container === 'webm',
+                    quality: 'highest', 
                     highWaterMark: 32 * 1024 * 1024,
                 });
                  

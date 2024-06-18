@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('daisu')
+		.setName('dice')
 		.setDescription('6面ダイスを振ります'),
 	async execute(interaction) {
 

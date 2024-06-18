@@ -5,7 +5,7 @@ module.exports = {
   
 		.setName('code') //コマンド名
     
-		.setDescription('コード配布URLを送信します'), //コマンド説明
+		.setDescription('コードテンプレート配布URLを送信します'), //コマンド説明
     
 	async execute(interaction) {
   
