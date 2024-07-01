@@ -61,7 +61,7 @@ module.exports = {
                     inputType: StreamType.WebmOpus,
                     inlineVolume: true,
                 });
-                resource.volume.setVolume(0.06);
+                resource.volume.setVolume(0.1);
               
                 //console.log(url, stream, resource)
 
@@ -74,6 +74,7 @@ module.exports = {
 		
                 await entersState(player,AudioPlayerStatus.Playing, 10 * 1000);
                 await entersState(player,AudioPlayerStatus.Idle, 24 * 60 * 60 * 1000);
+              　url.push(url[0]);
                 url.shift();
             } else {
                 break

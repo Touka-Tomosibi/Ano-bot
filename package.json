@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "discord.js": "^14.14.1",
+    "discord.js": "^14.10.2",
     "ytdl-core": "^4.11.5",
     "@discordjs/voice": "^0.16.0",
     "node-cron": "^3.0.3",
